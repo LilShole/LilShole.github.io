@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bimbux Studios on My New Hugo Site</title>
+    <link>https://example.org/blog/</link>
+    <description>Recent content in Bimbux Studios on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devlog #1 – Project Kickoff</title>
+      <link>https://example.org/blog/devlog-1/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://example.org/blog/devlog-1/</guid>
+      <description>&lt;p&gt;Today I officially started &lt;strong&gt;Bimbux Studios&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-i-worked-on&#34;&gt;What I worked on&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Project structure&lt;/li&gt;&#xA;&lt;li&gt;Initial ideas&lt;/li&gt;&#xA;&lt;li&gt;Tooling (Hugo, Git, VS Code)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This devlog will serve as a history of my progress in game development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
