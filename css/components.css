@@ -1,0 +1,27 @@
+button {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--text);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* loader */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #05070c;
+  z-index: 999;
+  transition: opacity .6s;
+}
+
+#page-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

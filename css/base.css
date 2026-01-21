@@ -1,0 +1,19 @@
+:root {
+  --bg: #05070c;
+  --primary: #88dff8;
+  --text: #ffffff;
+  --muted: rgba(255,255,255,.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}

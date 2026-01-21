@@ -1,0 +1,58 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+canvas#bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hamburger {
+  width: 28px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: #9ccfff;
+  margin: 6px 0;
+  transition: .3s;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 280px;
+  background: rgba(5,7,12,.96);
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: .4s ease;
+}
+
+.menu.active {
+  right: 0;
+}
