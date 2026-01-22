@@ -27,7 +27,10 @@ if (!canvas) {
     dots.forEach(d => {
       ctx.beginPath();
       ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(160,200,255,0.35)";
+   ctx.fillStyle = 'rgba(160,200,255,0.9)';
+ctx.shadowColor = 'rgba(160,200,255,0.6)';
+ctx.shadowBlur = 8;
+
       ctx.fill();
 
       d.y -= d.s;

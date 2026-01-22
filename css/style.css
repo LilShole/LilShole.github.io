@@ -8,9 +8,11 @@
 html, body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background:none;
+  background-color:#00000000;
+  color-scheme: dark;
   color: var(--text);
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 
@@ -233,9 +235,8 @@ main {
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  background: #000;
 }
-
-
 
 .container,
 .navbar,
@@ -271,4 +272,19 @@ footer {
   0% { opacity: .3; }
   50% { opacity: 1; }
   100% { opacity: .3; }
+}
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 2;
+}.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
