@@ -1,3 +1,17 @@
+@keyframes loaderPulse {
+  0% { opacity: .3; }
+  50% { opacity: 1; }
+  100% { opacity: .3; }
+}
+
+.loader-text {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: .4em;
+  color: #9ccfff;
+  animation: loaderPulse 1.6s ease-in-out infinite;
+}
+
 .fade-up {
   animation: fadeUp .7s ease both;
 }
@@ -11,4 +25,27 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.portal-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--x,50%) var(--y,50%),
+    rgba(140,200,255,0.12),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.portal-card:hover::after {
+  opacity: 1;
+}
+.portal-card {
+  transition:
+    transform .45s cubic-bezier(.4,0,.2,1),
+    box-shadow .45s ease,
+    background .45s ease;
 }

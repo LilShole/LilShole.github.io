@@ -1,3 +1,4 @@
+/* BUTTON */
 button {
   background: transparent;
   border: 1px solid var(--primary);
@@ -12,13 +13,137 @@ button:hover {
   color: #000;
 }
 
-/* loader */
+/* =========================
+   HAMBURGER
+========================= */
+
+#hamburger {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+#hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #9ccfff, #88dff8);
+  transition:
+    transform .35s cubic-bezier(.4,0,.2,1),
+    opacity .25s ease,
+    background .25s ease;
+}
+
+/* ACTIVE → X */
+#hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* MENU LINKS */
+#menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(80vw, 320px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 120px 32px 40px;
+
+  background: rgba(10,10,10,0.96);
+  backdrop-filter: blur(14px);
+
+  transform: translateX(100%);
+  transition: transform .45s cubic-bezier(.4,0,.2,1);
+
+  z-index: 1001;
+}
+
+#menu.active {
+  transform: translateX(0);
+}
+
+#menu a {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+}
+
+#menu.active a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#menu.active a:nth-child(1) { transition-delay: .30s; }
+#menu.active a:nth-child(2) { transition-delay: .36s; }
+#menu.active a:nth-child(3) { transition-delay: .42s; }
+#menu.active a:nth-child(4) { transition-delay: .48s; }
+#menu.active a:nth-child(5) { transition-delay: .54s; }
+
+#menu a.active {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+#menu a.active::after {
+  opacity: 1;
+}
+
+
+/* PORTAL CARD */
+.portal-card {
+  position: relative;
+  padding: 34px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.035);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: .35s ease;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.portal-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(136,223,248,0.4);
+    box-shadow:
+    0 25px 60px rgba(0,0,0,0.7),
+    0 0 40px rgba(136,223,248,0.15),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* LOADER */
 #page-loader {
   position: fixed;
   inset: 0;
   background: #05070c;
-  z-index: 999;
-  transition: opacity .6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity .8s ease;
 }
 
 #page-loader.hidden {
